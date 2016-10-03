@@ -10,6 +10,7 @@
                CachingStrategy="RecycleElement"
               ItemsSource="{Binding FeedItems}"
               HasUnevenRows="True"
+              RowHeight="175"
               IsPullToRefreshEnabled="True"
               RefreshCommand="{Binding LoadItemsCommand}"
               IsRefreshing="{Binding IsBusy, Mode=OneWay}"
@@ -35,7 +36,10 @@
                      WidthRequest="80"
                      Source="{Binding FirstImage}"
                      Aspect="AspectFill"
-                     VerticalOptions="Center"/>
+                     VerticalOptions="Center"
+                    BorderColor="#03A9F4"
+                    BorderThickness="2"
+                    FillColor="#03A9F4"/>
 
             </Grid>
           </ViewCell>
