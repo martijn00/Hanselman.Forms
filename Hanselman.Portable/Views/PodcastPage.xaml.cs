@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
+using Plugin.MediaManager;
 
 namespace Hanselman.Portable.Views
 {
@@ -25,8 +26,11 @@ namespace Hanselman.Portable.Views
             {
                 if (listView.SelectedItem == null)
                     return;
-                this.Navigation.PushAsync(new PodcastPlaybackPage
-                  (listView.SelectedItem as FeedItem));
+
+                CrossMediaManager.Current.Play((listView.SelectedItem as FeedItem).Mp3Url);
+
+               // this.Navigation.PushAsync(new PodcastPlaybackPage
+               //   (listView.SelectedItem as FeedItem));
                 listView.SelectedItem = null;
             };
         }

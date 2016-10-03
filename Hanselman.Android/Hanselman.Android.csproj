@@ -21,6 +21,7 @@
     <RestorePackages>true</RestorePackages>
     <DevInstrumentationEnabled>True</DevInstrumentationEnabled>
     <AndroidUseLatestPlatformSdk>False</AndroidUseLatestPlatformSdk>
+    <JavaMaximumHeapSize>1G</JavaMaximumHeapSize>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -180,6 +181,12 @@
     <Reference Include="Xamarin.GooglePlayServices.Wearable">
       <HintPath>..\packages\Xamarin.GooglePlayServices.Wearable.29.0.0.1\lib\MonoAndroid41\Xamarin.GooglePlayServices.Wearable.dll</HintPath>
       <Private>True</Private>
+    </Reference>
+    <Reference Include="Plugin.MediaManager.Abstractions">
+      <HintPath>..\packages\Plugin.MediaManager.0.0.0.1\lib\MonoAndroid\Plugin.MediaManager.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.MediaManager">
+      <HintPath>..\packages\Plugin.MediaManager.0.0.0.1\lib\MonoAndroid\Plugin.MediaManager.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
